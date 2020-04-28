@@ -1,0 +1,90 @@
+<form data-accion="nuevo" data-idalumno='' method="post" id="frm-alquiler">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <div class="card text-white bg-info mb-3" style="max-width: 24rem;">
+        <div class="card-header">
+             ALQUILER
+
+            <button type="button" id="btn-close-alquiler" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        ID ALQUILER:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="alquiler.Idalquiler" placeholder="XXXX000000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        ID CLIENTE:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="alquiler.Idcliente" placeholder="XXXX000000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        ID PELICULA:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="alquiler.Idpelicula" placeholder="AAA AAAA" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        FECHA PRESTAMO:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="alquiler.fechaprestamo" placeholder="XXXX000000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1">
+                <div class="row-col">
+                    <div class="col">
+                         FECHA DEVOLUCION:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="alquiler.fechadevolucion" placeholder="0000-0000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        VALOR:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="alquiler.valor" placeholder="XXXX000000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col text-center">
+                    <div class="col">
+                        <input id="btnGuardarAlquiler" type="submit" class="btn btn-success text-white" value="Guardar">
+                        <input type="reset" class="btn btn-warning text-white" value="Limpiar">
+                         <input type="button" class="btn btn-danger mostrar-buscar-alquiler text-white"
+                             data-modulo="alquiler" data-form="buscar-alquiler" value="Buscar" data-modulo="buscar-alquiler">
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col text-center">
+                    <div class="col" id="respuestaAlquiler"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

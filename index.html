@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido a Programacion IV</title>
+    <link rel="stylesheet" href="public/css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#">PELIS</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mostrar-clientes" data-modulo="clientes" data-form="cliemtes" href="#">CLIENTES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mostrar-alquiler" data-modulo="alquiler" data-form="alquiler" href="#">ALQUILER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mostrar-peliculas" data-modulo="peliculas" data-form="peliculas" href="#">PELICULAS</a>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="modulos">
+            <div class="modulos" id="vistas-clientes"></div>
+            <div class="modulos" id="vistas-buscar-clientes"></div>
+            <div class="modulos" id="vistas-alquiler"></div>
+            <div class="modulos" id="vistas-buscar-alquiler"></div>
+            <div class="modulos" id="vistas-peliculas"></div>
+            <div class="modulos" id="vistas-buscar-peliculas"></div>
+            
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script  src="public/js/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="module" src="public/js/app.js"></script>
+
+</body>
+</html>

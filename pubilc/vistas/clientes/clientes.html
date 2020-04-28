@@ -1,0 +1,80 @@
+<form data-accion="nuevo" data-idalumno='' method="post" id="frm-clientes">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <div class="card text-white bg-info mb-3" style="max-width: 24rem;">
+        <div class="card-header">
+             CLIENTES
+
+            <button type="button" id="btn-close-clientes" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        ID CLIENTE:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="clientes.Idcliente" placeholder="XXXX000000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        NOMBRE:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="clientes.nombre" placeholder="AAA AAAA" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        DIRECCION:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="clientes.direccion" placeholder="XXXX000000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1">
+                <div class="row-col">
+                    <div class="col">
+                      TELEFONO:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="clientes.telefono" placeholder="0000-0000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        DUI:
+                    </div>
+                    <div class="col">
+                        <input type="text" required id="clientes.dui" placeholder="XXXX000000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col text-center">
+                    <div class="col">
+                        <input id="btnGuardarClientes" type="submit" class="btn btn-success text-white" value="Guardar">
+                        <input type="reset" class="btn btn-warning text-white" value="Limpiar">
+                         <input type="button" class="btn btn-danger mostrar-buscar-clientes text-white"
+                             data-modulo="clientes" data-form="buscar-clientes" value="Buscar" data-modulo="buscar-clientes">
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col text-center">
+                    <div class="col" id="respuestaClientes"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
