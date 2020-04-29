@@ -8,11 +8,11 @@
             </button>
         </div>
         <div class="card-body">
-            <table id="tbl-buscar-clientes" class="table-striped table-info table-bordered table-hover">
+            <table id="tbl-buscar-clientes" class="table-striped bg-info table-bordered table-hover">
                 <thead>
                     <tr>
                         <th colspan="5">
-                            <input type="text" v-model="valor" v-on:keyup="buscarCliente" placeholder="codigo o nombre"
+                            <input type="text" v-model="valor" v-on:keyup="buscarCliente" placeholder="nombre direccion o telefono"
                                 class="form-control">
                         </th>
                     </tr>
@@ -39,4 +39,4 @@
         </div>
     </div>
 </form>
-<script src="/public/vistas/clientes/buscar-clientes.js"></script>
+<script src="public/vistas/clientes/buscar-clientes.js"></script>
