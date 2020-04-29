@@ -1,7 +1,7 @@
 <form data-accion="nuevo" data-idalumno='' method="post" id="frm-peliculas">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <div class="card text-white bg-info mb-3" style="max-width: 24rem;">
-        <div class="card-header">
+        <div class="card-header"><img src=public/css/palomitas.png>
              PELICULAS
 
             <button type="button" id="btn-close-peliculas" class="close" aria-label="Close">
@@ -15,7 +15,7 @@
                         DESCIPCION:
                     </div>
                     <div class="col">
-                        <input type="text" required id="peliculas.descripcion" placeholder="AAA AAAA" class="form-control">
+                        <input type="text"  v-model="peliculas.descripcion" placeholder="AAA AAAA" class="form-control">
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                         SINOPSIS:
                     </div>
                     <div class="col">
-                        <input type="text" required id="peliculas.sinopsis" placeholder="XXXX000000" class="form-control">
+                        <input type="text"  v-model="peliculas.sinopsis" placeholder="XXXX000000" class="form-control">
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                       GENERO:
                     </div>
                     <div class="col">
-                        <input type="text" required id="peliculas.genero" placeholder="AAAA" class="form-control">
+                        <input type="text"  v-model="peliculas.genero" placeholder="AAAA" class="form-control">
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         DURACION:
                     </div>
                     <div class="col">
-                        <input type="text" required id="peliculas.duracion" placeholder="XXXX000000" class="form-control">
+                        <input type="text"  v-model="peliculas.duracion" placeholder="XXXX000000" class="form-control">
                     </div>
                 </div>
             </div>

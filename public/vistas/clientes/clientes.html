@@ -1,6 +1,6 @@
-<form data-accion="nuevo" data-idcliente='' method="post" id="frm-clientes">
+<form v-on:submit.prevent="guardarClientes" data-action="nuevo" data-idcliente='' id="frm-clientes">
     <div class="card text-white bg-info mb-3" style="max-width: 24rem;">
-        <div class="card-header">
+        <div class="card-header"><img src=public/css/gafas-3d.png>
              CLIENTES
 
             <button type="button" id="btn-close-clientes" class="close" aria-label="Close">
@@ -13,7 +13,7 @@
                         NOMBRE:
                     </div>
                     <div class="col">
-                        <input type="text" required id="clientes.nombre" placeholder="AAA AAAA" class="form-control">
+                        <input type="text" v-model="clientes.nombre" placeholder="AAA AAAA" class="form-control">
                     </div>
                 </div>
             </div>
@@ -23,17 +23,17 @@
                         DIRECCION:
                     </div>
                     <div class="col">
-                        <input type="text" required id="clientes.direccion" placeholder="XXXX000000" class="form-control">
+                        <input type="text" v-model="clientes.direccion" placeholder="XXXX000000" class="form-control">
                     </div>
                 </div>
             </div>
-            <div class="row row-cols-1">
+            <div class="row row-cols-1 p-2">
                 <div class="row-col">
                     <div class="col">
                       TELEFONO:
                     </div>
                     <div class="col">
-                        <input type="text" required id="clientes.telefono" placeholder="0000-0000" class="form-control">
+                        <input type="text" v-model="clientes.telefono" placeholder="0000-0000" class="form-control">
                     </div>
                 </div>
             </div>
@@ -43,26 +43,28 @@
                         DUI:
                     </div>
                     <div class="col">
-                        <input type="text" required id="clientes.dui" placeholder="XXXX000000" class="form-control">
+                        <input type="text" v-model="clientes.dui" placeholder="XXXX000000" class="form-control">
                     </div>
                 </div>
             </div>
             <div class="row row-cols-1 p-2">
                 <div class="row-col text-center">
                     <div class="col">
-                        <input id="btnGuardarClientes" type="submit" class="btn btn-success text-white" value="Guardar">
+                        <input id="btnGuardarCliente" type="submit" class="btn btn-success text-white" value="Guardar">
                         <input type="reset" class="btn btn-warning text-white" value="Limpiar">
                          <input type="button" class="btn btn-danger mostrar-buscar-clientes text-white"
                              data-modulo="clientes" data-form="buscar-clientes" value="Buscar" data-modulo="buscar-clientes">
-                            
                     </div>
                 </div>
             </div>
-            <div class="row row-cols-1 p-2">
-                <div class="row-col text-center">
-                    <div class="col" id="respuestaClientes"> </div>
-                </div>
-            </div>
+           <div class="row p-2">
+               <div class="col-12 text-center">
+                   <div class="alert alert-success" role="alert">
+                       {{ clientes.msg }}
+                   </div>
+               </div>
+           </div>
         </div>
     </div>
 </form>
+<script src="public/vistas/clientes/clientes.js"></script>
