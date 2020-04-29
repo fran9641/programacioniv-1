@@ -1,4 +1,4 @@
 <?php
 include('../../conexion/DB.php');
-$conexion = new DB('localhost','root','','db_app_academica');
+$conexion = new DB('localhost','root','','db_sistema_peliculas');
 ?>
