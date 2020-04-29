@@ -59,9 +59,9 @@ class clientes{
     }
     public function buscarCliente($valor = ''){
         $this->db->consultas('
-            select clientes.idCliente, clientes.nombre, clientes.direccion, clientes.telefono
+            select clientes.idCliente, clientes.nombre, clientes.direccion, clientes.telefono, clientes.dui
             from clientes
-            where clientes.nombre like "%'. $valor .'%"  or clientes.telefono like "%'. $valor .'%"
+            where clientes.nombre like "%'. $valor .'%"  or clientes.telefono like "%'. $valor .'%" or clientes.dui like "%'. $valor .'%"
         ');
         return $this->respuesta = $this->db->obtener_data();
     }
