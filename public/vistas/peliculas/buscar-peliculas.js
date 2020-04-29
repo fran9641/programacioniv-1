@@ -7,7 +7,7 @@ var appBuscarPeliculas = new Vue({
     methods:{
         buscarPelicula:function(){
             fetch(`private/modulos/peliculas/procesos.php?proceso=buscarPelicula&pelicula=${this.valor}`).then(resp=>resp.json()).then(resp=>{
-                this.misdocentes = resp;
+                this.mispeliculas = resp;
             });
         },
         modificarPelicula:function(pelicula){
