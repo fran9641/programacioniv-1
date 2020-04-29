@@ -7,14 +7,14 @@ var appBuscarPeliculas = new Vue({
     methods:{
         buscarPelicula:function(){
             fetch(`private/modulos/peliculas/procesos.php?proceso=buscarPelicula&pelicula=${this.valor}`).then(resp=>resp.json()).then(resp=>{
-                this.misdocentes = resp;
+                this.mispeliculas = resp;
             });
         },
-        modificarDocente:function(docente){
-            appdocente.docente = docente;
-            appdocente.docente.accion = 'modificar';
+        modificarPelicula:function(pelicula){
+            apppelicula.pelicula = pelicula;
+            apppelicula.pelicula.accion = 'modificar';
         },
-        eliminarDocente:function(idDocente){
+        eliminarPelicula:function(idPelicula){
             fetch(`private/modulos/peliculas/procesos.php?proceso=eliminarPelicula&pelicula=${idPelicula}`).then(resp=>resp.json()).then(resp=>{
                 this.buscarPelicula();
             });

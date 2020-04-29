@@ -40,7 +40,7 @@ class pelicula{
             if( $this->datos['accion']==='nuevo' ){
                 $this->db->consultas('
                     INSERT INTO peliculas (descripcion, sinopsis, genero, duracion) VALUES(
-                        "'. $this->datos['descriocion'] .'",
+                        "'. $this->datos['descripcion'] .'",
                         "'. $this->datos['sinopsis'] .'",
                         "'. $this->datos['genero'] .'",
                         "'. $this->datos['duracion'] .'"
@@ -64,7 +64,7 @@ class pelicula{
         $this->db->consultas('
             select peliculas.idPelicula, peliculas.descripcion, peliculas.sinopsis, peliculas.genero, peliculas.duracion
             from peliculas
-            where peliculas.descripcion like "%'. $valor .'%" or peliculas.sinopsis like "%'. $valor .'%"
+            where peliculas.descripcion like "%'. $valor .'%" or peliculas.sinopsis like "%'. $valor .'%" or peliculas.genero like "%'. $valor .'%"
 
         ');
         return $this->respuesta = $this->db->obtener_data();

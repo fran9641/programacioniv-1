@@ -20,7 +20,7 @@ var apppelicula = new Vue({
                 this.pelicula.sinopsis = '';
                 this.pelicula.genero = '';
                 this.pelicula.duracion = '';
-                this.docente.accion = 'nuevo';
+                this.pelicula.accion = 'nuevo';
                 appBuscarPeliculas.buscarPelicula();
             });
         }
